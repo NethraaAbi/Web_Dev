@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<style>
+  body
+{
+  width: 100vw;
+  height: 100vh;
+  background-image:url("Black berry.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  display: flex;
+  flex-wrap:wrap;
+  align-content: center;
+  justify-content: center;
+}
+.form1
+{
+  font-family: monospace;
+  color:whitesmoke;
+}
+.pass1
+{
+ height:15px;
+ width: 280px;
+ 
+} 
+h1
+{
+  text-align:center;
+  text-decoration: underline;
+}
+.val1
+{
+  display: inline-block;
+  width: 120px;
+  height: 30px;
+  /* background-color: antiquewhite; */
+}
+.sub1
+{
+  margin-left: 150px;
+
+}
+
+
+</style>
+
+<script>
+    function validateForm() {
+  var name = document.myform.name.value
+  var Employee =document.myform.Employee.value
+  var email = document.myform.email.value
+  var password = document.myform.password.value
+  var confirm =document.myform.confirm.value
+  
+  if (name == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (Employee == "") {
+    alert("this is mandatory to be filled out");
+    return false;
+  }
+  if (email == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+  if (password == "") {
+    alert("Password must be filled out");
+    return false;
+  }
+  if (password.length<6){
+        alert("Password should be atleast 6 character long");
+        return false;
+  
+    }
+   
+   if (password != confirm){
+        alert("Incorrect Password.Kindly Recheck!");
+        return false;
+    } 
+
+  return true;
+}
+function submit1()
+{
+  var a=validateForm();
+  if(a == true)
+  {
+  alert("Logined Successfully");    
+   window.open("newform.html");
+  }
+}
+
+
+</script>
+<body>
+  <div class="form1">
+    <form name="myform" onsubmit="return validateForm()">
+      <h1> Employee Login</h1>
+        <label for="name" class="val1">Name:</label>
+        <input type="text" id="name" name="name" placeholder="abcdefgh" class="pass1"><br><br>
+        <label for="Employee" class="val1">Employee Id:</label>
+        <input type="number" id="Employee" name="Employee" placeholder="Enter your Employee id here" class="pass1"><br><br>
+        <label for="email" class="val1">Email:</label>
+        <input type="email" id="email" name="email" placeholder="xyz@gmail.com" class="pass1"><br><br>
+        <label for="password" class="val1">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Must be of alteast 6 chacracters" class="pass1"><br><br>
+        <label for="confrmpass" class="val1">Confirm Password:</label>
+        <input type="password" id="confirm " name="confirm" placeholder="Re-Enter your password" class="pass1"><br><br>
+        <input type="submit" value="Submit" class="sub1"  onclick="submit1()">
+      </form>
+    </div>
+      
+</body>
+</html>
