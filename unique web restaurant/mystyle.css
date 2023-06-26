@@ -1,0 +1,55 @@
+body
+{
+    width:100vw;
+    height:100vh;
+    background-image:url("rest bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    
+}
+h1{
+    text-align: center;
+    color:black;
+    font-family: fantasy;
+   text-shadow: 2px 2px 5px yellow;
+   text-decoration:underline;
+    
+  }
+  h3{
+    text-align: center;
+    color:black;
+    font-family: Comic sans ms;
+    text-shadow:2px 2px 5px yellow;
+  }
+  h2{
+    text-align: center;
+    color:black;
+    font-family: fantasy;
+   text-shadow: 2px 2px 5px yellow;
+    
+  }
+
+.container {
+    display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 500px;
+  height: 300px;
+  align-content: space-between;
+  }
+  .item {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+    color:azure;
+    font-family:monospace;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    border-color: 6px solid aquamarine;
+    outline-style: double;
+    
+  }

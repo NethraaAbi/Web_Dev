@@ -1,0 +1,21 @@
+body
+{
+    width:100vw;
+    height:100vh;
+    background-image:url("rest bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.i{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:aliceblue;
+    text-shadow: 2px 2px 5px rgb(162, 239, 241);
+}
+img {
+    width: 100%;
+    height: auto;
+    border-color: 6px solid aquamarine;
+    outline-style: double;
+    
+  }
